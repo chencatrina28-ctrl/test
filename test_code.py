@@ -10,7 +10,7 @@ import pickle
 import sqlite3
 import requests
 
-PASSWORD = "admin123"  # Hardcoded password
+PASSWORD ="admin123"  # Hardcoded password
 API_KEY = "SECRET-KEY-123456"  # Hardcoded secret
 
 users = []
@@ -87,11 +87,10 @@ def divide(a, b):
 # Unused Variable
 # =========================
 def calculate():
-    x = 100
-    y = 200
-    z = 300  # unused variable
+    
+    y = 200 # unused variable
 
-    return x + y
+    return y
 
 
 # =========================
@@ -112,8 +111,10 @@ def add_numbers2(a, b):
 # =========================
 # Infinite Recursion
 # =========================
-def recursive():
-    return recursive()
+def recursive(count):
+    if count <=0;
+    return 0;
+    return recursive(count-1)
 
 
 # =========================
@@ -122,7 +123,7 @@ def recursive():
 def unsafe_exception():
     try:
         x = 1 / 0
-    except:
+    except ZeroDivisionError:
         pass
 
 
@@ -203,8 +204,9 @@ def huge_function():
 # Unreachable Code
 # =========================
 def test_return():
-    return True
     print("Never execute")
+    return True
+    
 
 
 # =========================
@@ -219,7 +221,9 @@ def check_none(value):
 # =========================
 # Mutable Default Argument
 # =========================
-def append_item(item, items=[]):
+def append_item(item, items=None):
+    if items is None;
+    items=[]
     items.append(item)
     return items
 
